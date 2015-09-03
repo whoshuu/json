@@ -4690,7 +4690,7 @@ class basic_json
                     if (c >= 0x00 and c <= 0x1f)
                     {
                         // print character c as \uxxxx
-                        sprintf(&result[pos + 1], "u%04x", int(c));
+                        sprintf_s(&result[pos + 1], 5, "u%04x", int(c));
                         pos += 6;
                     }
                     else
